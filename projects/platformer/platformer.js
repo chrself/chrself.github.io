@@ -21,6 +21,7 @@ $(function () {
     createPlatform(-50, -50, 50, canvas.height + 500); //bottom
     createPlatform(canvas.width, -50, 50, canvas.height + 100);
     createCannon()
+    
 
     /**
      * Uncomment the loops below to add a "grid" to your platformer game's screen
@@ -52,7 +53,10 @@ $(function () {
     createPlatform(800,400,100,10)
     createPlatform(1000,300,100,10)
     createPlatform(1200,200,100,10)
-
+    createPlatform(200,200,100,10)
+    createPlatform(400,200,100,10)
+    createPlatform(600,300,100,10)
+    createPlatform(500,400,100,10)
 
 
     
@@ -61,23 +65,22 @@ $(function () {
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable('type', x, y, gravity, bounce)
-
-
-
-
-    // TODO 3
+    createCollectable("steve", 1200, 200)
+    createCollectable("steve", 200, 300)
+    createCollectable("database", 200, 300)
+    
+    // TODO 3createCollectable("steve", 200, 300)
     // Create cannons
     // You must decide the wall you want the cannon on, the position on the wall, and the time between shots in milliseconds
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon('side', position, delay, width, height)
-createCannon("left,delay=0.01,h")
-
-
-
+    createCannon("right", 700, 700) // cannon on left wall, 600px down, shooting once per second
+    createCannon("top", 800, 1000)
+    createCannon("top", 1100, 800)
+    createCannon("top", 1200, 800)
     /////////////////////////////////////////////////
     //////////ONLY CHANGE ABOVE THIS POINT///////////
     /////////////////////////////////////////////////
   }
-
   registerSetup(setup);
 });
